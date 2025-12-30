@@ -9,11 +9,14 @@ class Hero{
     constructor(age,name,type){
         this.age = age;
         this.name = name;
-        this.type = type
+        this.type = type.toLowerCase()
     }
 
     attack(){
-        return `${type} atacou usando ${this.attackTypes[this.type]}`
+        return ` O ${this.type} ${this.name} atacou usando ${this.attackTypes[this.type]}`
     }
-    
+
 }
+
+var person = new Hero(20,"João",'ninja');
+console.log(person.attack())
